@@ -3,14 +3,39 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+    width: 375px;
+    font-size: 10px;
+}
+li {
+    color: #ffffff;
+    text-decoration: none; 
+}
+p {
+    color: black;
+    text-decoration: none;
+}
+h2 {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    color: black;
+    text-decoration: none;
+}
+.restaurants img {
+    width: 335px;
+}
+/*footer {
+    background-color: black;
+    color: #ffffff;
 }
 
+/*
 body {
     box-sizing: border-box;
     background: $colour-secondary;
-}
+}*/
