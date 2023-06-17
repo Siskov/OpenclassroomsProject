@@ -2,6 +2,10 @@
     text-shadow: $offset $offset $colour;
 }
 
+@mixin card-shadow{
+    box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+}
+
 @mixin border($colour:$colour-primary) {
     border: .1rem solid $colour;
 }

@@ -1,4 +1,10 @@
-.quote {
+.header {
+    &__picture img {
+        width: 375px;
+        height: 255px;
+    }
+}
+/*.quote {
     text-align: right;
     font-size: 6rem;
     font-weight: 900;
@@ -37,11 +43,5 @@
     }
     &:hover {
         cursor: pointer;
-        & > #{$self}__heading {
-            background: $colour-primary;
-        }
-        & > #{$self}__image {
-            opacity: 1;
-        }
     }
-}
+}*/
