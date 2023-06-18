@@ -9,11 +9,30 @@ body {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 5rem;
-    font-style: italic;
+}li {
+    color: #ffffff;
+    text-decoration: none; 
 }
-
-textarea {
+p {
+    color: black;
+    text-decoration: none;
+}
+h2 {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    color: black;
+    text-decoration: none;
+}
+.restaurants img {
+    width: 335px;
+}
+footer {
+    background-color: #353535;
+    color: #ffffff;
+}
+/*textarea {
     font-family: 'Roboto';
     font-weight: 100;
     font-size: 2rem;
