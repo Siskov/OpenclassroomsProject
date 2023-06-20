@@ -1,18 +1,71 @@
+body {
+    width: 100%;
+}
 .header {
-    &__picture img {
+    &__picture {
+        & img {
+        object-fit: cover;
         width: 375px;
         height: 255px;
+        }
+    & a {
+        width: 100%;
+        }
     }
 }
 .menu {
-    width: 100%;
+    width: 375px;
     background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    position: relative;
+    margin-top: -50px;
+    padding-bottom: 30px;
+    &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    }
+    &__name {
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+        padding: 35px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
     &__entrees{
         width: 349px;
         background-color: #ffffff;
         border-radius: 20px;
-        @include card-shadow
+        @include card-shadow;
+        &--bold {
+            font-weight: bold;
+        }
     }
+    &__main_dish {
+        width: 349px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        @include card-shadow;
+        &--bold {
+            font-weight: bold;
+        }
+    }
+}
+.munu {
+&__desserts {
+    width: 349px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    @include card-shadow;
+}
 }
 
 /*.about {

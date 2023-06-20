@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: $colour-primary;
-    font-size: 2rem;
+    font-size: 15px;
     font-weight: 100;
     line-height: 1.7;
 }
@@ -12,6 +12,7 @@ h1 {
 }li {
     color: #ffffff;
     text-decoration: none; 
+    list-style: none;
 }
 p {
     color: black;
@@ -22,15 +23,31 @@ h2 {
     text-decoration: none;
 }
 h1 {
+    font-size: 28px;
     color: black;
     text-decoration: none;
 }
 .restaurants img {
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     width: 335px;
+    max-height: 174px;
 }
 footer {
+    padding: 26px;
     background-color: #353535;
     color: #ffffff;
+    & p {
+        color: #ffffff;
+    }
+    & .footer__logo h1 {
+        color: #ffffff;
+        font-family: shrikhand;
+    }
+}
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-size: 20px;
 }
 /*textarea {
     font-family: 'Roboto';
