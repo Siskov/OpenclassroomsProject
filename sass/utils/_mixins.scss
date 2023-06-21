@@ -10,6 +10,9 @@
     border: .1rem solid $colour;
 }
 
+@mixin gradient{
+    background-image: linear-gradient($colour-primary-lighter, $colour-primary);
+}
 @mixin img-ratio {
     width: 100%;
         display: block;

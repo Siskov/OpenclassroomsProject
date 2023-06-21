@@ -24,16 +24,19 @@ body {
     border-top-right-radius: 45px;
     position: relative;
     margin-top: -50px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     &__cards {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    &--uppercase {
+        padding-top: 43px;
+    }
     }
     &__name {
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
-        padding: 35px 0px;
+        padding-top: 35px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -56,6 +59,26 @@ body {
         @include card-shadow;
         &--bold {
             font-weight: bold;
+        }
+    }
+    &__desserts {
+    &--bold {
+        font-weight: bold;
+    }
+    }
+    & .navigation {
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            margin-top: 30px;
+            width: 186px;
+            height: 50px;
+            @include gradient;
+            & p {
+            color: #ffffff;
+            }
         }
     }
 }

@@ -109,6 +109,11 @@ footer .footer__logo h1 {
   flex-direction: row;
   align-items: center;
 }
+.header__menu .back {
+  position: relative;
+  padding: 15px;
+  margin-right: -60px;
+}
 .header__logo {
   line-height: 1;
   height: 64px;
@@ -140,7 +145,7 @@ footer .footer__logo h1 {
   width: 218px;
   height: 51px;
   border-radius: 30px;
-  background-color: #9356dc;
+  background-image: linear-gradient(#e771da, #9356dc);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,6 +155,10 @@ footer .footer__logo h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 400;
+}
+.header__button a {
+  text-decoration: none;
 }
 .header__content {
   background-color: #f6f6f6;
@@ -159,15 +168,23 @@ footer .footer__logo h1 {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 55px;
 }
-.header__content p span {
+.header__content span p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.header__content h1 {
+  font-size: 22px;
+}
 
 .navigation-container {
   width: 100%;
+  padding: 57px 0px;
+}
+.navigation-container h1 {
+  padding-bottom: 30px;
 }
 
 .navigation {
@@ -256,7 +273,8 @@ footer .footer__logo h1 {
     }
 }*/
 .restaurants {
-  padding: 20px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-top: 40px;
   background: #f6f6f6;
 }
@@ -271,7 +289,7 @@ footer .footer__logo h1 {
   align-items: center;
   background-color: #f6f6f6;
   gap: 18px;
-  padding: 20px 0px;
+  padding: 25px 0px;
 }
 .restaurants-cards__content {
   display: flex;
@@ -419,17 +437,20 @@ body {
   border-top-right-radius: 45px;
   position: relative;
   margin-top: -50px;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 .menu__cards {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+.menu__cards--uppercase {
+  padding-top: 43px;
+}
 .menu__name {
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
-  padding: 35px 0px;
+  padding-top: 35px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -453,6 +474,22 @@ body {
 }
 .menu__main_dish--bold {
   font-weight: bold;
+}
+.menu__desserts--bold {
+  font-weight: bold;
+}
+.menu .navigation__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 30px;
+  width: 186px;
+  height: 50px;
+  background-image: linear-gradient(#e771da, #9356dc);
+}
+.menu .navigation__button p {
+  color: #ffffff;
 }
 
 .munu__desserts {
