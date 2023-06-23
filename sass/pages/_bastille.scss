@@ -56,6 +56,11 @@ body {
         align-items: center;
         justify-content: space-around;
         width: 100%;
+        & h1 {
+            font-size: 25px;
+            font-family: 'Shrikhand', cursive;
+            font-style: italic;
+        }
         & .btn {
             color: #060606;
         }

@@ -519,6 +519,11 @@ body {
   justify-content: space-around;
   width: 100%;
 }
+.menu__name h1 {
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+}
 .menu__name .btn {
   color: #060606;
 }
