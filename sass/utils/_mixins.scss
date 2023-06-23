@@ -10,6 +10,9 @@
     border: .1rem solid $colour;
 }
 
+@mixin gradient1{
+    background-image: linear-gradient($colour-primary, $colour-primary-lighter);
+}
 @mixin gradient{
     background-image: linear-gradient($colour-primary-lighter, $colour-primary);
 }

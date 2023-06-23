@@ -48,6 +48,10 @@ footer {
 }
 .fa-classic, .fa-regular, .fa-solid, .far, .fas {
     font-size: 20px;
+    padding: 5px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 /*textarea {
     font-family: 'Roboto';
