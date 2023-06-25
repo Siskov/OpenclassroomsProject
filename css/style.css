@@ -229,6 +229,9 @@ footer .footer__logo h1 {
   justify-content: center;
   align-items: center;
 }
+.navigation__button1 p {
+  font-weight: 400;
+}
 .navigation__button1--highlited {
   background-color: #f5edff;
   display: flex;
@@ -253,6 +256,9 @@ footer .footer__logo h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.navigation__button1--highlited p {
+  font-weight: 400;
 }
 
 /*.nav {
@@ -279,6 +285,66 @@ footer .footer__logo h1 {
         }
     }
 }*/
+.loader-wrapper {
+  width: 375px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loaderw 3s 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loaderw {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid #99e2d0;
+  animation: loader 3s 0.2s infinite ease-out;
+  animation-duration: 2s;
+}
+.loader i {
+  display: flex;
+  color: #ff79da;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  height: 100%;
+  animation: fa-spinner 2s 0.2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+@keyframes fa-spinner {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(2turn);
+  }
+}
 .restaurants {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -355,6 +421,8 @@ footer .footer__logo h1 {
 
 .footer__logo h1 {
   cursor: pointer;
+  padding-bottom: 10px;
+  font-size: 25px;
 }
 .footer__content a {
   text-decoration: none;
@@ -365,12 +433,10 @@ footer .footer__logo h1 {
   font-size: 15px;
   gap: 5px;
 }
+.footer__content--icon i {
+  font-size: 15px;
+}
 
-/*.container {
-    margin: $layout-margin;
-    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
-    @include border($colour-tertiary);
-}*/
 /*.form {
     width: 100%;
     padding-bottom: $grid-gutter;
@@ -547,6 +613,7 @@ body {
   height: 69px;
   width: 59px;
   padding-bottom: 10px;
+  padding-right: 15px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
