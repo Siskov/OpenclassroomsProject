@@ -1,21 +1,21 @@
 .loader-wrapper{
     width: 375px;
-    height: 100%;
+    height: 2400px;
     position: absolute;
     top: 0;
     left: 0;
     background-color: #f6f6f6;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    animation: loaderw 3s 1s ease-out;
-    animation-fill-mode: forwards;
+    animation: loaderw 0ms 3s both ease-out;
 }
 @keyframes loaderw {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+    0% {transform: translateX(0); opacity: 1;}
+    100% {transform: translateX(-9999px); opacity: 0;}
 }
 .loader{
+    margin-top: -1500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +24,7 @@
     border-radius: 20px;
     position: relative;
     border: 1px solid $colour-tertiary;
-    animation: loader 3s 0.2s infinite ease-out;   
-    animation-duration: 2s;
+    animation: loader 3s 0.2s infinite ease-out;
     & i {
         display: flex;
         color: $colour-secondary;
@@ -33,7 +32,7 @@
         align-items: center;
         padding: 0%;
         height: 100%;
-        animation: fa-spinner 2s 0.2s infinite ease-in;  
+        animation: fa-spinner 3s 0.2s infinite ease-in;  
     }
 }
 @keyframes loader{
@@ -71,17 +70,34 @@
         & .btn {
             color: #060606;
         }
-        & .btn i.fa-regular:active{
-            display: none;
-        }
-        & .btn i.fa-solid.fa-heart{
-            display: none;
-            color: $colour-primary;
+        .btn i.fa-regular:active{
+            font-weight: 900;
+            background-clip: text;
+            -webkit-background-clip: 
+            text;color: transparent;
             @include gradient1;
+            animation: heart 1.5s both 0.2s 1 ease-in;
         }
-        & .btn i.fa-solid.fa-heart:active{
-            @include gradient1;
-            transition: 1s;
+        @keyframes heart{
+            0% {
+                transform: scaleY(0);
+                opacity: .1;
+            }
+            17% {
+                transform: scaleY(.18);
+            }
+            24% {
+                transform: scaleY(.4);
+            }
+            46% {
+                transform: scaleY(.81);
+            }
+            85%,100% {
+                opacity: 1;
+            }
+            100% {
+                transform: scaleY(1);
+            }
         }
     }
     &__1{

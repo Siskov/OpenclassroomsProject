@@ -13,6 +13,38 @@ body {
         }
     }
 }
+.btn {
+    color: #060606;
+}
+.btn:active i.fa-regular{
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: 
+    text;color: transparent;
+    @include gradient1;
+    animation: heart 1s both 0.2s 1 ease-in;
+    }
+@keyframes heart{
+    0% {
+        transform: scaleY(0);
+        opacity: .1;
+    }
+    17% {
+        transform: scaleY(.18);
+    }
+    24% {
+        transform: scaleY(.4);
+    }
+    46% {
+        transform: scaleY(.81);
+    }
+    85%,100% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
 .menu {
     width: 375px;
     background-color: #f6f6f6;
@@ -68,6 +100,7 @@ body {
     &__card {
         width: 349px;
         display: flex;
+        position: relative;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -77,6 +110,66 @@ body {
         line-height: 1.3;
         padding-left: 15px;
         cursor: pointer;
+        &--hover {
+            position: relative;
+            color: #ffffff;
+            background-color: $colour-tertiary;
+            border-radius: 20px;
+            width: 349px;
+            height: 69px;
+            margin-bottom: -83px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            & i {
+                padding: 16px;
+                font-size: 23px;
+            }
+        }
+        &:hover {
+            animation: card 1s forwards 0.2s 1 ease-out;
+            & + i {
+                animation: spin 0.5s forwards 0.2s 1 ease-out;
+            }
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0turn); 
+                transform: translateX(+300px);
+            }
+            100% {
+                transform: rotate(1turn);
+                transform: translateX(0);
+            }
+        }
+        &{
+            animation: card1 0.5s backwards 0.2s 1 ease-in;
+        }
+        @keyframes card {
+            0% {
+                width: 100%;
+                box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec;            
+            }
+            100% {
+                width: 85%;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec;            
+            }  
+        }
+        @keyframes card1 {
+            0% {
+                width: 85%;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+                box-shadow: 0 4px 8px 0 #ececec, 0 0 0 0 #ececec; 
+            }  
+            100% {
+                width: 100%;
+                box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+            }
+        }
         & h2 {
             font-size: 18px;
         }
@@ -84,6 +177,7 @@ body {
     & .btn-price {
         height: 69px;
         width: 59px;
+        position: relative;
         padding-bottom: 10px;
         padding-right: 15px;
         display: flex;
@@ -93,6 +187,7 @@ body {
     }
     &__entrees{
         width: 100%;
+        position: relative;
     }
     &__main_dish {
         width: 100%
