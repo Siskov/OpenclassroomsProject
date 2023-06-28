@@ -156,6 +156,11 @@ footer .footer__logo h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 3px 0px 5px #ececec, 0px 3px 5px 5px #ececec;
+}
+.header__button:hover {
+  background-image: linear-gradient(#e890df, rgba(208, 106, 219, 0.7960784314));
+  box-shadow: 0px 3px 0px 5px #e0dfdf, 0px 3px 5px 5px #dad9d9;
 }
 .header__button p {
   color: #ffffff;
@@ -659,6 +664,7 @@ body {
   line-height: 1.3;
   padding-left: 15px;
   cursor: pointer;
+  animation: card2 1s forwards 0.2s 1 ease-out;
 }
 .menu__card--hover {
   position: relative;
@@ -683,6 +689,9 @@ body {
 .menu__card:hover + i {
   animation: spin 0.5s forwards 0.2s 1 ease-out;
 }
+.menu__card::after {
+  animation: card1 0.5s backwards 0.2s 1 ease-in;
+}
 @keyframes spin {
   0% {
     transform: rotate(0turn);
@@ -692,9 +701,6 @@ body {
     transform: rotate(1turn);
     transform: translateX(0);
   }
-}
-.menu__card {
-  animation: card1 0.5s backwards 0.2s 1 ease-in;
 }
 @keyframes card {
   0% {
@@ -718,6 +724,14 @@ body {
   100% {
     width: 100%;
     box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+  }
+}
+@keyframes card2 {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 .menu__card h2 {
@@ -761,10 +775,20 @@ body {
   color: #ffffff;
   font-weight: 600;
 }
+.navigation__button2:hover {
+  background-image: linear-gradient(#e890df, rgba(208, 106, 219, 0.7960784314));
+  box-shadow: 0px 3px 0px 5px #e0dfdf, 0px 3px 5px 5px #dad9d9;
+}
 
 #bigger-card {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#bigger-card-hover {
+  height: 86.297px;
+  position: relative;
+  margin-bottom: -100.297px;
 }
 
 #dish-bold {

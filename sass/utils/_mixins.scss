@@ -5,7 +5,12 @@
 @mixin card-shadow{
     box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
 }
-
+@mixin button-shadow{
+    box-shadow: 0px 3px 0px 5px #ececec, 0px 3px 5px 5px #ececec;
+}
+@mixin button-shadow-darker{
+    box-shadow: 0px 3px 0px 5px #e0dfdf, 0px 3px 5px 5px #dad9d9;
+}
 @mixin border($colour:$colour-primary) {
     border: .1rem solid $colour;
 }
@@ -15,6 +20,9 @@
 }
 @mixin gradient{
     background-image: linear-gradient($colour-primary-lighter, $colour-primary);
+}
+@mixin gradient-lighter {
+    background-image: linear-gradient($colour-primary-lighter1, $colour-primary-lighter2);
 }
 @mixin img-ratio {
     width: 100%;

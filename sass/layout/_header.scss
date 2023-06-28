@@ -51,6 +51,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include button-shadow;
+        &:hover{
+            @include gradient-lighter; 
+            @include button-shadow-darker;
+        }
         & p {
             color: #ffffff;
             display: flex;

@@ -110,6 +110,7 @@ body {
         line-height: 1.3;
         padding-left: 15px;
         cursor: pointer;
+        animation: card2 1s forwards 0.2s 1 ease-out;
         &--hover {
             position: relative;
             color: #ffffff;
@@ -127,11 +128,14 @@ body {
                 font-size: 23px;
             }
         }
-        &:hover {
+        &:hover{
             animation: card 1s forwards 0.2s 1 ease-out;
             & + i {
                 animation: spin 0.5s forwards 0.2s 1 ease-out;
             }
+        }
+        &::after{
+            animation: card1 0.5s backwards 0.2s 1 ease-in;
         }
         @keyframes spin {
             0% {
@@ -142,9 +146,6 @@ body {
                 transform: rotate(1turn);
                 transform: translateX(0);
             }
-        }
-        &{
-            animation: card1 0.5s backwards 0.2s 1 ease-in;
         }
         @keyframes card {
             0% {
@@ -168,6 +169,14 @@ body {
             100% {
                 width: 100%;
                 box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+            }
+        }
+        @keyframes card2 {
+            0% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
             }
         }
         & h2 {
@@ -212,11 +221,20 @@ body {
             color: #ffffff;
             font-weight: 600;
             }
+            &:hover {
+                @include gradient-lighter; 
+                @include button-shadow-darker;
+            }
         }
     }
     #bigger-card{
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    #bigger-card-hover {
+        height: 86.297px;
+        position: relative;
+        margin-bottom: -100.297px;
     }
     #dish-bold {
         padding: 0px;
