@@ -8,11 +8,38 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    animation: loaderw 0ms 3s both ease-out;
+    animation: loaderw 3s both 0ms ease-out;
+    z-index: 0;
 }
 @keyframes loaderw {
-    0% {transform: translateX(0); opacity: 1;}
-    100% {transform: translateX(-9999px); opacity: 0;}
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    91% {
+        opacity: 0.99;
+    }
+    93% {
+        opacity: 0.85;
+    }
+    95% {
+        opacity: 0.55;
+    }
+    97% {
+        opacity: 0.40;
+    }
+    98% {
+        opacity: 0.20;
+    }
+    99% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-9999px);
+    }
 }
 .loader{
     margin-top: -1500px;
