@@ -7,7 +7,6 @@
 }
 
 html {
-  width: 375px;
   font-size: 8px;
   display: flex;
   flex-direction: column;
@@ -20,6 +19,7 @@ html {
 body {
   box-sizing: border-box;
   z-index: 1;
+  display: contents;
 }
 
 body {
@@ -66,6 +66,7 @@ h1 {
 }
 
 footer {
+  width: 375px;
   padding: 26px;
   background-color: #353535;
   color: #ffffff;
@@ -98,15 +99,12 @@ footer .footer__logo h1 {
     font-style: italic;
     font-size: 2.75rem;
 }*/
-/*.btn {
-    @include btn
-}*/
 .header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 375px;
   align-items: center;
 }
 .header__menu {
@@ -292,7 +290,7 @@ footer .footer__logo h1 {
     }
 }*/
 .loader-wrapper {
-  width: 375px;
+  width: 100%;
   height: 2400px;
   position: absolute;
   top: 0;
@@ -309,23 +307,35 @@ footer .footer__logo h1 {
   0% {
     opacity: 1;
   }
-  90% {
+  80% {
     opacity: 1;
   }
-  91% {
-    opacity: 0.99;
+  82% {
+    opacity: 0.9;
   }
-  93% {
+  84% {
     opacity: 0.85;
   }
-  95% {
-    opacity: 0.55;
+  86% {
+    opacity: 0.8;
   }
-  97% {
+  88% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.65;
+  }
+  92% {
     opacity: 0.4;
   }
-  98% {
+  94% {
+    opacity: 0.3;
+  }
+  96% {
     opacity: 0.2;
+  }
+  98% {
+    opacity: 0.1;
   }
   99% {
     transform: translateX(0);
@@ -374,6 +384,7 @@ footer .footer__logo h1 {
   }
 }
 .restaurants {
+  width: 375px;
   padding-top: 60px;
   padding-bottom: 60px;
   margin-top: 40px;
@@ -397,19 +408,21 @@ footer .footer__logo h1 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
   padding: 0px 14px;
   line-height: 1.3;
-}
-.restaurants-cards__content .btn {
   color: #060606;
 }
-.restaurants-cards__content .btn i.fa-regular:active {
+.restaurants-cards__content .btn .fa-heart {
+  color: #060606;
+}
+.restaurants-cards__content .btn:checked ~ i {
+  animation: heart 0.5s both 0.2s 1 ease-in;
   font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(#9356dc, #e771da);
-  animation: heart 1.5s both 0.2s 1 ease-in;
 }
 @keyframes heart {
   0% {
@@ -429,8 +442,15 @@ footer .footer__logo h1 {
     opacity: 1;
   }
   100% {
+    opacity: 1;
     transform: scaleY(1);
   }
+}
+.restaurants-cards #content-txt {
+  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .restaurants-cards__1 {
   width: 335px;
@@ -439,7 +459,6 @@ footer .footer__logo h1 {
   flex-direction: column;
   box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
   border-radius: 20px;
-  gap: 5px;
 }
 .restaurants-cards__1--new {
   width: 335px;
@@ -448,7 +467,6 @@ footer .footer__logo h1 {
   flex-direction: column;
   box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
   border-radius: 20px;
-  gap: 5px;
 }
 .restaurants-cards__1--new h3 {
   position: relative;
@@ -464,6 +482,9 @@ footer .footer__logo h1 {
   justify-content: center;
 }
 
+.footer {
+  width: 375px;
+}
 .footer__logo h1 {
   cursor: pointer;
   padding-bottom: 10px;
@@ -480,6 +501,16 @@ footer .footer__logo h1 {
 }
 .footer__content--icon i {
   font-size: 15px;
+}
+
+input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: 270px;
+  width: 40px;
+  height: 40px;
 }
 
 /*.form {
@@ -592,13 +623,13 @@ body {
   color: #060606;
   padding: 0px;
 }
-.btn:active > i {
+.btn:checked ~ i {
   font-weight: 900;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(#9356dc, #e771da);
-  animation: heart 1s both 0.2s;
+  animation: heart 0.5s both 0.2s 1 ease-in;
 }
 
 @keyframes heart {
@@ -668,6 +699,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  color: #060606;
 }
 .menu__name h1 {
   font-size: 25px;
@@ -883,10 +915,14 @@ body {
 #card1:hover {
   animation: card-slide 0.5s forwards 0.2s 1 ease-out;
 }
+#card1:hover::before {
+  content: "";
+  opacity: 1;
+}
 #card1:hover + #card1-hover i {
   animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
 }
-#card1::after {
+#card1:hover::after {
   animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
 }
 
@@ -1066,52 +1102,6 @@ body {
   animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
 }
 
-/*.about {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 2fr 5fr; 
-    grid-template-rows: repeat(3, auto);
-    padding: $grid-gutter;
-    grid-template-areas:
-        "imagery heading"
-        "imagery copy"
-        "imagery btn";
-    margin-bottom: $grid-gutter;
-    &__heading {
-        grid-area: heading;
-        color: $colour-white;
-        @include heading-shadow;
-        text-align: right;
-        padding-right: $grid-gutter;
-    }
-    &__imagery {
-        grid-area: imagery;
-    }
-    &__pic {
-        overflow:hidden;
-        width: 80%;
-        border-radius: 1000rem;
-        border: 1.5rem solid $colour-primary;
-        & img {
-            display: block;
-            width: 100%;
-        }
-    }
-    &__copy {
-        grid-area: copy;
-        & p{
-            line-height: 2rem*1.2;
-            margin-bottom: $grid-gutter*2.25;
-        } 
-    }
-    &__btn{
-        @include btn;
-        grid-area: btn;
-        & a {
-            text-decoration: none;
-        }
-    }
-}*/
 .header__picture img {
   width: 375px;
   height: 255px;
