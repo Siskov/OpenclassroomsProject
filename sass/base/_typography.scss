@@ -54,6 +54,11 @@ footer {
         cursor: pointer;
     }
 }
+li {
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
 /*textarea {
     font-family: 'Roboto';
     font-weight: 100;

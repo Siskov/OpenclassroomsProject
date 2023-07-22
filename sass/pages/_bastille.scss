@@ -1,14 +1,11 @@
 body {
-    width: 100%;
-    /*& :first-child {
-        animation: card-refresh 1s forwards 0.05s 1 ease-out;
-    }*/
+    max-width: 375px;
 }
 .header {
     &__picture {
         & img {
         object-fit: cover;
-        width: 375px;
+        max-width: 375px;
         height: 255px;
         }
     & a {
@@ -118,7 +115,7 @@ body {
         @include card-shadow;
         line-height: 1.3;
         padding-left: 15px;
-        z-index: 1;
+        z-index: 2;
         cursor: pointer;
         @keyframes hover-opacity {
             0% {opacity: 0;}
@@ -131,30 +128,19 @@ body {
             border-radius: 20px;
             width: 349px;
             height: 69px;
-            margin-top: -83px;
+            margin-top: -69px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
             z-index: 0;
             & i {
+                z-index: -3;
                 padding: 16px;
                 font-size: 23px;
                 position: relative;
             }
         }
-       /* &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            animation: card 0.5s forwards 0.2s 1 ease-out;
-        }
-        &:after {
-            content: '';
-            position: absolute;
-            z-index: -2;
-            animation: card1 0.5s backwards 0.2s 1 ease-in;
-        }*/
         @keyframes spin-to-wiew {
             0% {
                 transform: translateX(25px) rotate(0turn);
@@ -286,7 +272,7 @@ body {
     #bigger-card8-hover {
         height: 86.297px;
         position: relative;
-        margin-top: -100.297px;
+        margin-top: -86px;
     }
     #bigger-card4-hover {
         height: 86.297px;
@@ -296,26 +282,7 @@ body {
     #dish-bold {
         padding: 0px;
     }
-#card1 {
-    animation: card-refresh 1s forwards 0.05s 1 ease-out;
-    & + #card1-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover{
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        &::before{
-            content: '';
-            opacity: 1;
-        }
-        & + #card1-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-        &::after{
-            animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-        }
-    }
-}
-#card2 {
+/*#card2 {
     animation: card-refresh 1s forwards 0.1s 1 ease-out;
     & + #card2-hover {
         animation: hover-opacity 1s backwards 0.06s 1 ease;
@@ -478,5 +445,55 @@ body {
     }
     &::after{
         animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
+    }
+}*/
+.container{
+    z-index: 3;
+}
+.container{
+    animation: card-refresh 1s forwards 0.1s 1 ease-in-out;
+    & > .menu__card{
+        /*width: 100%;
+        transition:  width 0.5s ease-in 0.2s;*/
+        & {
+            animation: card-slide-back 0.5s backwards 0.2s 1 ease-in; 
+            & + .menu__card--hover i {
+                animation: icon-out 0.5s backwards 0.2s 1 ease-in;
+            }
+        }
+        &::after{
+            animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
+        }
+        &:hover {
+            /*width: 85%;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec;  
+            transition:  width 0.5s ease-out 0.2s;*/
+            animation: card-slide 0.5s forwards 0.2s 1 ease-out;
+            & + .menu__card--hover i {
+                animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
+            }
+            &::before{
+                animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
+            }
+            &::after{
+                /*width: 100%;
+                box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec; 
+                transition: box-shadow 0.5 ease-in 0.2s;*/
+                animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
+                & + .menu__card--hover i {
+                    transform: translateX(-25px);
+                }
+            }
+        }
+    }
+}
+@keyframes icon-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(25px);
     }
 }
