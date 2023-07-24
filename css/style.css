@@ -639,7 +639,6 @@ body {
   0% {
     transform: scaleY(0);
     opacity: 0.1;
-    scale: 0;
   }
   17% {
     transform: scaleY(0.18);
@@ -787,11 +786,64 @@ body {
     box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
   }
 }
-@keyframes card-refresh {
+@keyframes card-refresh1 {
   0% {
+    opacity: 0;
     transform: translateY(10px);
   }
+  15% {
+    opacity: 0;
+  }
   100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.menu__card h2 {
+  font-size: 18px;
+}
+@keyframes card-refresh2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.menu__card h2 {
+  font-size: 18px;
+}
+@keyframes card-refresh3 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.menu__card h2 {
+  font-size: 18px;
+}
+@keyframes card-refresh4 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
     transform: translateY(0px);
   }
 }
@@ -867,8 +919,6 @@ body {
   background-image: linear-gradient(#e771da, #9356dc);
   border-radius: 30px;
   cursor: pointer;
-}
-.navigation__button2 p {
   color: #ffffff;
   font-weight: 600;
 }
@@ -898,213 +948,20 @@ body {
   padding: 0px;
 }
 
-/*#card2 {
-    animation: card-refresh 1s forwards 0.1s 1 ease-out;
-    & + #card2-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card2-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card3 {
-    animation: card-refresh 1s forwards 0.15s 1 ease-out;
-    & + #card3-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card3-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card4 {
-    animation: card-refresh 1s forwards 0.2s 1 ease-out;
-    & + #card4-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card4-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card4 {
-    animation: card-refresh 1s forwards 0.30s 1 ease-out;
-    & + #bigger-card4-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #bigger-card4-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card5 {
-    animation: card-refresh 1s forwards 0.25s 1 ease-out;
-    & + #card5-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card5-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card6 {
-    animation: card-refresh 1s forwards 0.30s 1 ease-out;
-    & + #card6-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card6-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card7 {
-    animation: card-refresh 1s forwards 0.35s 1 ease-out;
-    & + #card7-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card7-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &:hover::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card8 {
-    animation: card-refresh 1s forwards 0.40s 1 ease-out;
-    & + #card8-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card8-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card8 {
-    animation: card-refresh 1s forwards 0.40s 1 ease-out;
-    & + #bigger-card8-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #bigger-card8-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card9 {
-    animation: card-refresh 1s forwards 0.45s 1 ease-out;
-    & + #card9-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card9-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}
-#card10 {
-    animation: card-refresh 1s forwards 0.45s 1 ease-out;
-    & + #card10-hover {
-        animation: hover-opacity 1s backwards 0.06s 1 ease;
-    }
-    &:hover {
-        animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-        & + #card10-hover i {
-            animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-        }
-    }
-    &::after{
-        animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-    }
-}*/
-.container {
-  z-index: 3;
+.container1 {
+  animation: card-refresh1 1s forwards 0s 1 ease-in-out;
 }
 
-.container {
-  animation: card-refresh 1s forwards 0.1s 1 ease-in-out;
+.container2 {
+  animation: card-refresh2 1s backwards 0s 1 ease-out;
 }
-.container > .menu__card {
-  /*width: 100%;
-  transition:  width 0.5s ease-in 0.2s;*/
+
+.container3 {
+  animation: card-refresh3 1s backwards 0s 1 ease-out;
 }
-.container > .menu__card {
-  animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-}
-.container > .menu__card + .menu__card--hover i {
-  animation: icon-out 0.5s backwards 0.2s 1 ease-in;
-}
-.container > .menu__card::after {
-  animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-}
-.container > .menu__card:hover {
-  /*width: 85%;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec;  
-  transition:  width 0.5s ease-out 0.2s;*/
-  animation: card-slide 0.5s forwards 0.2s 1 ease-out;
-}
-.container > .menu__card:hover + .menu__card--hover i {
-  animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
-}
-.container > .menu__card:hover::before {
-  animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-}
-.container > .menu__card:hover::after {
-  /*width: 100%;
-  box-shadow: 0 4px 0 0 #ececec, 0 4px 0 0 #ececec; 
-  transition: box-shadow 0.5 ease-in 0.2s;*/
-  animation: card-slide-back 0.5s backwards 0.2s 1 ease-in;
-}
-.container > .menu__card:hover::after + .menu__card--hover i {
-  transform: translateX(-25px);
+
+.container4 {
+  animation: card-refresh4 1s backwards 0s 1 ease-out;
 }
 
 @keyframes icon-out {
@@ -1115,6 +972,26 @@ body {
     transform: translateX(25px);
   }
 }
+input[type=checkbox].card {
+  margin: 0px;
+  height: 69px;
+  opacity: 0;
+  z-index: 6;
+  width: 349px;
+}
+input[type=checkbox].card:checked ~ .menu__card {
+  animation: card-slide 0.5s forwards 0.2s 1 ease-out;
+}
+input[type=checkbox].card:checked ~ .menu__card + .menu__card--hover i {
+  animation: spin-to-wiew 0.5s forwards 0.2s 1 ease-out;
+}
+input[type=checkbox].card:not(:checked) ~ .menu__card {
+  animation: card-slide-back 0.3s backwards 0s 1 ease-in-out;
+}
+input[type=checkbox].card:not(:checked) ~ .menu__card + .menu__card--hover i {
+  animation: icon-out 0.3s backwards 0s 1 ease-in-out;
+}
+
 .header__picture img {
   width: 375px;
   height: 255px;
