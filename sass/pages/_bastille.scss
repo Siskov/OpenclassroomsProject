@@ -338,13 +338,13 @@ body {
     
 }
 .container2{
-    animation: card-refresh2 1s backwards 0s 1 ease-out;
+    animation: card-refresh2 1s forwards 0s 1 ease-out;
 }
 .container3{
-    animation: card-refresh3 1s backwards 0s 1 ease-out;
+    animation: card-refresh3 1s forwards 0s 1 ease-out;
 }
 .container4{
-    animation: card-refresh4 1s backwards 0s 1 ease-out;
+    animation: card-refresh4 1s forwards 0s 1 ease-out;
 }
 @keyframes icon-out {
     0% {
