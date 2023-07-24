@@ -791,7 +791,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
-  15% {
+  20% {
     opacity: 0;
   }
   100% {
@@ -823,7 +823,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
-  65% {
+  60% {
     opacity: 0;
   }
   100% {
@@ -839,7 +839,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
-  90% {
+  80% {
     opacity: 0;
   }
   100% {
@@ -911,6 +911,7 @@ body {
 .navigation__button2 {
   display: flex;
   justify-content: center;
+  align-self: center;
   align-items: center;
   border: none;
   margin-top: 30px;
@@ -941,7 +942,7 @@ body {
 #bigger-card4-hover {
   height: 86.297px;
   position: relative;
-  margin-top: -100.297px;
+  margin-top: -86px;
 }
 
 #dish-bold {
@@ -949,19 +950,19 @@ body {
 }
 
 .container1 {
-  animation: card-refresh1 1s forwards 0s 1 ease-in-out;
+  animation: card-refresh1 1.2s backwards 0s 1 ease-out;
 }
 
 .container2 {
-  animation: card-refresh2 1s forwards 0s 1 ease-out;
+  animation: card-refresh2 1.2s backwards 0s 1 ease-out;
 }
 
 .container3 {
-  animation: card-refresh3 1s forwards 0s 1 ease-out;
+  animation: card-refresh3 1.2s backwards 0s 1 ease-out;
 }
 
 .container4 {
-  animation: card-refresh4 1s forwards 0s 1 ease-out;
+  animation: card-refresh4 1.2s backwards 0s 1 ease-out;
 }
 
 @keyframes icon-out {
