@@ -302,7 +302,7 @@ li {
 .loader-wrapper {
   width: 100%;
   height: 2400px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #f6f6f6;
@@ -358,6 +358,7 @@ li {
 .loader {
   margin-top: -1500px;
   display: flex;
+  position: fixed;
   justify-content: center;
   align-items: center;
   width: 50px;
@@ -369,6 +370,7 @@ li {
 }
 .loader i {
   display: flex;
+  position: fixed;
   color: #ff79da;
   justify-content: center;
   align-items: center;
