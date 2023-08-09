@@ -17,7 +17,6 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   z-index: 1;
   display: contents;
 }
@@ -83,11 +82,19 @@ footer .footer__logo h1 {
   font-family: shrikhand;
 }
 
-.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+.fa-classic,
+.fa-regular,
+.fa-solid,
+.far,
+.fas {
   font-size: 20px;
   padding: 5px;
 }
-.fa-classic:hover, .fa-regular:hover, .fa-solid:hover, .far:hover, .fas:hover {
+.fa-classic:hover,
+.fa-regular:hover,
+.fa-solid:hover,
+.far:hover,
+.fas:hover {
   cursor: pointer;
 }
 
