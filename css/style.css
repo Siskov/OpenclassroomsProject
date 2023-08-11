@@ -1,3 +1,104 @@
+@media (min-width: 375px) and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  header.header {
+    width: 100%;
+    max-width: 768px;
+  }
+  div.header__logo {
+    height: 84px;
+  }
+  div.header__location {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding-left: 17px;
+  }
+  div.header__content {
+    height: 250px;
+    padding-bottom: 15px;
+  }
+  div.header__content div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+  div.header__picture {
+    width: 100%;
+    max-width: 768px;
+  }
+  div.header__picture a img {
+    width: 100%;
+    max-width: 768px;
+  }
+  nav.navigation-container {
+    padding: 15px 0px;
+  }
+  section.restaurants {
+    width: 100%;
+    max-width: 768px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+  }
+  div.restaurants-cards__1 {
+    width: 93%;
+  }
+  div.restaurants-cards__1 a img {
+    width: 100%;
+  }
+  div.restaurants-cards__1--new {
+    width: 93%;
+  }
+  div.restaurants-cards__1--new div.new h3 {
+    margin-left: 75%;
+  }
+  div.restaurants-cards__1--new a img {
+    width: 100%;
+  }
+  input.btn {
+    margin-left: 55%;
+    width: 25%;
+    height: 7%;
+  }
+  footer.footer {
+    width: 100%;
+    max-width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+  }
+  section.menu {
+    width: 100%;
+    max-width: 768px;
+  }
+  div.menu__cards {
+    width: 80%;
+  }
+  div.menu__card {
+    width: 100%;
+  }
+  div.menu__card--hover {
+    width: 100%;
+  }
+  div.container1 {
+    width: 100%;
+  }
+  div.menu__name input.btn {
+    margin-left: 63%;
+    width: 10%;
+    height: 3%;
+  }
+}
 *,
 *::after,
 *::before {
@@ -119,14 +220,23 @@ li {
 .header {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   align-items: center;
+}
+.header__picture {
+  width: 100%;
+  max-width: 375px;
+  display: flex;
+  align-self: flex-start;
 }
 .header__menu {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 }
@@ -403,7 +513,8 @@ li {
   }
 }
 .restaurants {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   padding-top: 60px;
   padding-bottom: 60px;
   margin-top: 40px;
@@ -508,7 +619,8 @@ li {
 }
 
 .footer {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
 }
 .footer__logo h1 {
   cursor: pointer;
@@ -582,21 +694,19 @@ input {
         }
     }
 }*/
-.header__picture img {
-  width: 375px;
-  height: 255px;
-}
-
 body {
+  width: 100%;
   max-width: 375px;
 }
 
 .header__picture img {
   object-fit: cover;
+  width: 100%;
   max-width: 375px;
   height: 255px;
 }
 .header__picture a {
+  display: flex;
   width: 100%;
 }
 
@@ -650,6 +760,7 @@ body {
 }
 .menu__cards {
   display: flex;
+  width: 93%;
   flex-direction: column;
   gap: 14px;
 }
@@ -690,12 +801,12 @@ body {
   color: #060606;
 }
 .menu__card {
-  width: 349px;
+  width: 100%;
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
@@ -842,7 +953,7 @@ body {
 }
 .menu__entrees {
   min-width: 0px;
-  max-width: 281px;
+  max-width: 80%;
   flex: 1;
 }
 .menu__entrees h2 {
@@ -956,7 +1067,7 @@ input[type=checkbox].card {
   height: 69px;
   opacity: 0;
   z-index: 6;
-  width: 349px;
+  width: 80%;
 }
 input[type=checkbox].card:checked ~ .menu__card {
   animation: card-slide 0.5s forwards 0.2s 1 ease-out;
@@ -969,16 +1080,6 @@ input[type=checkbox].card:not(:checked) ~ .menu__card {
 }
 input[type=checkbox].card:not(:checked) ~ .menu__card + .menu__card--hover i {
   animation: icon-out 0.3s backwards 0s 1 ease-in-out;
-}
-
-.header__picture img {
-  width: 375px;
-  height: 255px;
-}
-
-.header__picture img {
-  width: 375px;
-  height: 255px;
 }
 
 /*.project {

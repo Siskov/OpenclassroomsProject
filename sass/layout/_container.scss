@@ -85,7 +85,8 @@
     100% {transform: rotate(2turn);}
 }
 .restaurants {
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     padding-top: 60px;
     padding-bottom: 60px;
     margin-top: 40px;
@@ -190,7 +191,8 @@
     }
 }
 .footer {
-    width: 375px;
+    width: 100%;
+    max-width: 375px;
     &__logo h1{
     cursor: pointer;
     padding-bottom: 10px;
