@@ -1,4 +1,8 @@
-@media (min-width: 375px) and (max-width: 768px){
+@media (min-width: 376px){
+div#logo.header__logo {
+    height: 84px;
+    margin-right: 10%;
+}
 body {
     width: 100%;
 }
@@ -36,10 +40,11 @@ div.header{
 }
 nav.navigation-container{
     padding: 15px 0px;
+    margin-bottom: 40px;
 }
 section.restaurants {
     width: 100%;
-    max-width: 768px;
+    max-width: 991px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 30px;
@@ -62,7 +67,7 @@ div.restaurants{
     }
 }
 input.btn {
-    margin-left: 55%;
+    margin-left: 75%;
     width: 25%;
     height: 7%;
 }
@@ -98,13 +103,58 @@ div.container1{
     width: 100%;
 }
 div.menu__name input.btn {
-    margin-left: 63%;
-    width: 10%;
+    margin-left: 75%;
+    width: 25%;
     height: 3%;
 }
 }
 
 
-@media (min-width: 768px) and (max-width: 991px){
-
+@media (min-width: 768px){
+div#logo.header__logo {
+    height: 84px;
+    margin-right: 15%;
+}
+header.header {
+    max-width: 991px;
+}
+div.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 10px
+}
+section.menu {
+    max-width: 991px;
+}
+div.header__picture {
+    max-width: 991px;
+& a img {
+        max-width: 991px;
+    }
+}
+input.btn {
+    margin-left: 35%;
+    width: 7%;
+    height: 7%;
+}
+div.restaurants-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div.restaurants-cards__1 {
+    width: 45%;
+    max-width: 445px;
+    &--new{
+    width: 45%;
+    max-width: 445px;
+    }
+}
+footer.footer{
+    max-width: 991px;
+}
 }
