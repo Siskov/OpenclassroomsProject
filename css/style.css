@@ -3,6 +3,9 @@
     height: 84px;
     margin-right: 10%;
   }
+  span.loader {
+    margin-top: -1500px;
+  }
   body {
     width: 100%;
   }
@@ -525,7 +528,7 @@ li {
   }
 }
 .loader {
-  margin-top: -1500px;
+  margin-top: -1700px;
   display: flex;
   position: fixed;
   justify-content: center;
