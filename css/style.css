@@ -425,6 +425,7 @@ li {
   gap: 22px;
   flex-direction: row;
   width: 324px;
+  padding-left: 5px;
   height: 72px;
   box-shadow: 0 4px 8px 0 #ececec, 5px 6px 20px 5px #ececec;
   border-radius: 30px;
