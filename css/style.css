@@ -418,7 +418,7 @@ li {
 .navigation__button1 p {
   font-weight: 400;
 }
-.navigation__button1--highlited {
+.navigation__button1:hover {
   background-color: #f5edff;
   display: flex;
   align-items: center;
@@ -426,10 +426,10 @@ li {
   flex-direction: row;
   width: 324px;
   height: 72px;
-  box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+  box-shadow: 0 4px 8px 0 #ececec, 5px 6px 20px 5px #ececec;
   border-radius: 30px;
 }
-.navigation__button1--highlited h3 {
+.navigation__button1:hover h3 {
   overflow: visible;
   margin: -10px;
   padding: 11px;
@@ -443,7 +443,10 @@ li {
   justify-content: center;
   align-items: center;
 }
-.navigation__button1--highlited p {
+.navigation__button1:hover i {
+  color: #9356dc;
+}
+.navigation__button1:hover p {
   font-weight: 400;
 }
 

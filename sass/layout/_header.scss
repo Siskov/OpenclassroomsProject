@@ -138,7 +138,7 @@
         & p {
             font-weight: 400;
         }
-        &--highlited {
+        &:hover{
         background-color: #f5edff;
         display: flex;
         align-items: center;
@@ -146,7 +146,7 @@
         flex-direction: row;
         width: 324px;
         height: 72px;
-        @include card-shadow;
+        @include card-shadow-hover;
         border-radius: 30px;
         & h3 {
             overflow: visible;
@@ -161,6 +161,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        & i {
+            color: $colour-primary;
         }
         & p {
             font-weight: 400;

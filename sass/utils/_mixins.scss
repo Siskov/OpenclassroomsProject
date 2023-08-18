@@ -1,9 +1,11 @@
 @mixin heading-shadow($colour:lightness-shift($colour-primary), $offset: $heading-shadow-size){
     text-shadow: $offset $offset $colour;
 }
-
 @mixin card-shadow{
     box-shadow: 0 4px 8px 0 #ececec, 0 6px 20px 0 #ececec;
+}
+@mixin card-shadow-hover{
+    box-shadow: 0 4px 8px 0 #ececec, 5px 6px 20px 5px #ececec;
 }
 @mixin button-shadow{
     box-shadow: 0px 3px 0px 5px #ececec, 0px 3px 5px 5px #ececec;
